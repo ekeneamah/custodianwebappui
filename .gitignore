@@ -5,6 +5,8 @@
 /tmp
 /out-tsc
 /bazel-out
+/src/app/buttons
+/src/app/charts
 
 # Node
 /node_modules
