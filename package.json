@@ -11,7 +11,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --o --configuration development",
+    "start": "ng serve --o --configuration development --port 4567",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

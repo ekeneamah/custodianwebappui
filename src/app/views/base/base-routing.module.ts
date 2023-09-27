@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AccordionsComponent } from './accordion/accordions.component';
 
-import { NavsComponent } from './navs/navs.component';
 
 
 const routes: Routes = [
@@ -26,13 +25,7 @@ const routes: Routes = [
         },
       },
 
-      {
-        path: 'navs',
-        component: NavsComponent,
-        data: {
-          title: 'Navs & Tabs',
-        },
-      }
+
 
     ],
   },
