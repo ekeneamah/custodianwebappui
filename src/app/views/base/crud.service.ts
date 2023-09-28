@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CrudService {
-  private apiUrl = 'https://web.powerva.microsoft.com/environments/f946f50b-d77f-e468-aa35-998b939a2846/bots/crf56_custodianCare/canvas?__version__=2' ; // Replace with your API endpoint
+  private apiUrl = 'https://prod-135.westeurope.logic.azure.com:443/workflows/8e1c03358b6a435ca912609e3d703c3d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=f77Shm8SqXEHCrUx1cXTXkB_cxaE49ddQTmWmI3kp04' ; // Replace with your API endpoint
 
   constructor(private http: HttpClient) {}
 
