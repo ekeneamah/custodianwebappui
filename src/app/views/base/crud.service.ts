@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CrudService {
-  private apiUrl = 'your_api_url_here'; // Replace with your API endpoint
+  private apiUrl = 'https://web.powerva.microsoft.com/environments/f946f50b-d77f-e468-aa35-998b939a2846/bots/crf56_custodianCare/canvas?__version__=2' ; // Replace with your API endpoint
 
   constructor(private http: HttpClient) {}
 
