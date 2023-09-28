@@ -35,6 +35,7 @@ import {
   UtilitiesModule,
 } from '@coreui/angular';
 
+import { IconModule, IconSetService } from '@coreui/icons-angular';
 
 const APP_CONTAINERS = [
   DefaultFooterComponent,
@@ -45,17 +46,39 @@ const APP_CONTAINERS = [
 @NgModule({
   declarations: [AppComponent, ...APP_CONTAINERS],
   imports: [
-
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    AvatarModule,
+    BreadcrumbModule,
+    FooterModule,
+    DropdownModule,
+    GridModule,
+    HeaderModule,
+    SidebarModule,
+    IconModule,
     NavModule,
-
-    BadgeModule
-
+    ButtonModule,
+    FormModule,
+    UtilitiesModule,
+    ButtonGroupModule,
+    ReactiveFormsModule,
+    SidebarModule,
+    SharedModule,
+    TabsModule,
+    ListGroupModule,
+    ProgressModule,
+    BadgeModule,
+    ListGroupModule,
+    CardModule,
+    NgScrollbarModule
   ],
   providers: [
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy
     },
+    IconSetService,
     Title
   ],
   bootstrap: [AppComponent]
