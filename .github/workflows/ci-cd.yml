@@ -1,0 +1,32 @@
+name: Deploy to Azure
+
+on:
+  push:
+    branches:
+      - master  # Modify this branch name as needed
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14  # Use the desired Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular app
+        run: npm run build
+
+      - name: Deploy to Azure
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'custodianwebappui'
+          publish-profile:  ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3A12C8303CCF4900938958F945818368 }}
+          package: ./dist/coreui-free-angular-admin-template  # Replace with your Angular app's name

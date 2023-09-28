@@ -6,7 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - custodianwebappui
 on:
   push:
     branches:
-      - master
+      - masterX
   workflow_dispatch:
 
 jobs:
