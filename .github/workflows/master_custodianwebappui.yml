@@ -53,4 +53,4 @@ jobs:
           app-name: 'custodianwebappui'
 
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3A12C8303CCF4900938958F945818368 }}
-          package:  ./dist/coreui-free-angular-admin-template
+          package:  $(System.DefaultWorkingDirectory)/dist/coreui-free-angular-admin-template
