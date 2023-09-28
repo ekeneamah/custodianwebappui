@@ -6,7 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - custodianwebappui
 on:
   push:
     branches:
-      - masterX
+      - master
   workflow_dispatch:
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: ./dist/coreui-free-angular-admin-template
 
   deploy:
     runs-on: ubuntu-latest
@@ -53,4 +53,4 @@ jobs:
           app-name: 'custodianwebappui'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3A12C8303CCF4900938958F945818368 }}
-          package: .
+          package:  ./dist/coreui-free-angular-admin-template
