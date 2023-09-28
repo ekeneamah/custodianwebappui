@@ -3,7 +3,7 @@ name: Deploy to Azure
 on:
   push:
     branches:
-      - master  # Modify this branch name as needed
+      - masterX  # Modify this branch name as needed
 
 jobs:
   build-and-deploy:
