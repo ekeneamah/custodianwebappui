@@ -29,9 +29,13 @@ jobs:
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
+        id: upload-artifact
         with:
           name: node-app
           path: ./dist/coreui-free-angular-admin-template
+      # Access the uploaded artifact
+      - name: Access Uploaded Artifact
+        run: echo "The path to the uploaded artifact is ${{ steps.upload-artifact.outputs.artifacts.node-app }}"
 
   deploy:
     runs-on: ubuntu-latest
@@ -43,6 +47,7 @@ jobs:
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
+
         with:
           name: node-app
 
