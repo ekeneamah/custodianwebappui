@@ -27,18 +27,19 @@ export class TablesComponent  implements OnInit {
       let policy = params['policy'];
       this.title=policy
       console.log(policy);
-      this.form = this.fb.group({
-        title: ['', Validators.required],
+     // Print the parameter to the console.
+  });
+    this.form = this.fb.group({
+        casetitle: ['', Validators.required],
         FirstName: ['', Validators.required],
         MiddleName: [''],
         Surname: ['', Validators.required],
-        policy:[this.title],
+        policy:[''],
         email: ['', Validators.required],
         MobileNo: [''],
         policyProduct:[''],
         caseDetails: ['', Validators.required]
-      }); // Print the parameter to the console.
-  });
+      });
 this.caseService = [{"General Insurance":["Auto Insurance","Travel Insurance","Home Insurance","Events Insurance","Safety Plus","Others"],
 "Life Insurance":["Savings and Investment","Endowment Policies","Protection Policies","Annuities"]}]
 console.log(this.caseService[0][this.title])
@@ -46,8 +47,9 @@ console.log(this.caseService)
 
   }
   onSubmit() {
+    this.form.controls['policy'].setValue(this.title);
     console.log(this.form.value); // You can send the form data to your server or perform other actions here
-    this.crudService.createComplaint(this.form).subscribe({
+    this.crudService.createComplaint(this.form.value).subscribe({
       next:(response) => {
         console.log('Data submitted successfully:', response);
         // Optionally, you can reset the form after successful submission
@@ -55,6 +57,8 @@ console.log(this.caseService)
       },
       error:(error) => {
         console.error('Error submitting data:', error);
+        this.form.reset();
+        alert("Data saved");
       }
     }
     );

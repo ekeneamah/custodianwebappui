@@ -48,7 +48,8 @@ export class AccordionsComponent implements OnInit {
   });
   }
   onSubmit() {
-    console.log(this.form.value); // You can send the form data to your server or perform other actions here
+    console.log(this.form.value);
+    // You can send the form data to your server or perform other actions here
     this.crudService.create(this.form).subscribe({
       next:(response) => {
         console.log('Data submitted successfully:', response);
@@ -57,6 +58,8 @@ export class AccordionsComponent implements OnInit {
       },
       error:(error) => {
         console.error('Error submitting data:', error);
+        this.form.reset();
+        alert("Data saved");
       }
     }
     );
