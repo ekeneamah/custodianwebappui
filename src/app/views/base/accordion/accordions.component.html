@@ -1,0 +1,172 @@
+<div class="row" ngPreserveWhitespaces>
+  <div class="col-xs-12">
+  <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+
+<div class="bootstrap-iso mx-auto" style="margin-top:20px;padding: 20px;">
+  <h3>{{title}}</h3>
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" method="post">
+     <div class="form-group ">
+      <label class="control-label " for="title">
+       Title
+      </label>
+      <input class="form-control" id="title" formControlName="title" placeholder="Title" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="FirstName">
+       First Name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="FirstName" formControlName="FirstName" placeholder="First Name" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="MiddleName">
+       Middle Name
+      </label>
+      <input class="form-control" id="MiddleName" formControlName="MiddleName" placeholder="Middle Name" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="Surname">
+       Surname
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="Surname" formControlName="Surname" placeholder="Surname" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="DateofBirth">
+       Date of Birth
+      </label>
+      <input class="form-control" id="DateofBirth" formControlName="DateofBirth" placeholder="MM/DD/YYYY" type="text"/>
+     </div>
+     <div class="form-group" id="div_Gender">
+      <label class="control-label " for="Gender">
+       Gender
+      </label>
+      <div class="">
+       <label class="radio-inline">
+        <input formControlName="Gender" type="radio" value="Male"/>
+        Male
+       </label>
+       <label class="radio-inline">
+        <input formControlName="Gender" type="radio" value="Female"/>
+        Female
+       </label>
+      </div>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="email">
+       Email
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="email" formControlName="email" placeholder="Email" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="MobileNo">
+       Mobile No
+      </label>
+      <input class="form-control" id="MobileNo" formControlName="MobileNo" placeholder="Mobile No" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="InsuranceStartDate">
+       Insurance Start Date
+      </label>
+      <input class="form-control" id="InsuranceStartDate" formControlName="InsuranceStartDate" placeholder="MM/DD/YYYY" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="Identification">
+       Identification
+      </label>
+      <select class="select form-control" id="Identification" formControlName="Identification">
+       <option value="National ID">
+        National ID
+       </option>
+       <option value="Drivers Lisence">
+        Drivers Lisence
+       </option>
+       <option value="International Passport">
+        International Passport
+       </option>
+      </select>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="IdentificationNumber">
+       Identification Number
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="IdentificationNumber" formControlName="IdentificationNumber" placeholder="Identification Number" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="IdentificationFile">
+       Upload means of Identification.
+      </label>
+      <input class="form-control" id="IdentificationFile" formControlName="IdentificationFile" placeholder="Upload means of Identification." type="file"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="Amounttosave">
+       Amount to save (Premium)
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="Amounttosave" formControlName="Amounttosave" placeholder="Amount to save (Premium)" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="PaymentFrequency">
+       Payment Frequency
+      </label>
+      <input class="form-control" id="PaymentFrequency" formControlName="PaymentFrequency" placeholder="Payment Frequency" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="PolicyTerm">
+       Policy Term (No. of years)
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="PolicyTerm" formControlName="PolicyTerm" placeholder="Policy Term (No. of years)" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="LifeSumAssured">
+       Life Sum Assured
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="LifeSumAssured" formControlName="LifeSumAssured" type="text"/>
+     </div>
+     <div class="form-group">
+      <div>
+       <button class="btn btn-primary " name="submit" type="submit">
+        Submit
+       </button>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+  </div>
+
+</div>
